@@ -1,0 +1,14 @@
+---
+- host: ubuntu
+  roles:
+    - python
+    - java
+
+    - role: change_motd
+      vars:
+        motd: "Ansible Namage node by jmczaens-tip"
+
+    - role: create_user
+      vars:
+        username: "jmczaens-tip"
+        name: "Jose Mari C. Zaens"
